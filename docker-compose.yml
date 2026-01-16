@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - COOLIFY_URL=https://dummy-coolify.io
+      - COOLIFY_BRANCH=main
+      - SOURCE_COMMIT=abcdef123456
+      - NODE_ENV=production
