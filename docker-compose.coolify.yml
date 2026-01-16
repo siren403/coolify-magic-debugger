@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    environment:
+      - COOLIFY_URL=${COOLIFY_URL:-https://dummy-coolify.io}
+      - COOLIFY_BRANCH=${COOLIFY_BRANCH:-main}
+      - SOURCE_COMMIT=${SOURCE_COMMIT:-unknown}
+      - NODE_ENV=production
+      - PREVIEW_MODE=${PREVIEW_MODE:-false}
+    # No port exposure - Coolify reverse proxy handles routing
